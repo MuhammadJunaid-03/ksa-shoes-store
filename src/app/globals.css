@@ -3,11 +3,11 @@
 /* ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* Core Palette — Deep Dark Luxury */
-  --primary: #0a0a0a;
-  --primary-soft: #141414;
-  --primary-card: #1a1a1a;
-  --primary-elevated: #222222;
+  /* Core Palette — Refined Dark Luxury (brightened) */
+  --primary: #121218;
+  --primary-soft: #1a1a22;
+  --primary-card: #1e1e26;
+  --primary-elevated: #282832;
 
   /* Gold Accent Spectrum */
   --gold: #c9a96e;
@@ -16,21 +16,21 @@
   --gold-shimmer: linear-gradient(135deg, #c9a96e 0%, #e0c992 50%, #c9a96e 100%);
   --gold-text: linear-gradient(135deg, #c9a96e 0%, #f0dba8 40%, #c9a96e 80%, #e0c992 100%);
 
-  /* Text */
-  --text-primary: #f5f0e8;
-  --text-secondary: #9a9590;
-  --text-muted: #605c58;
+  /* Text — warmer whites, brighter muted */
+  --text-primary: #f5f1ea;
+  --text-secondary: #b0aaa2;
+  --text-muted: #7a756e;
   --text-accent: var(--gold);
 
-  /* Surfaces */
-  --bg-page: #0a0a0a;
-  --bg-card: #141414;
-  --bg-card-hover: #1c1c1c;
-  --bg-glass: rgba(20, 20, 20, 0.7);
+  /* Surfaces — lifted with subtle blue undertone */
+  --bg-page: #121218;
+  --bg-card: #1a1a22;
+  --bg-card-hover: #24242e;
+  --bg-glass: rgba(26, 26, 34, 0.8);
 
-  /* Borders */
-  --border: rgba(201, 169, 110, 0.12);
-  --border-hover: rgba(201, 169, 110, 0.3);
+  /* Borders — slightly more visible */
+  --border: rgba(201, 169, 110, 0.14);
+  --border-hover: rgba(201, 169, 110, 0.32);
   --border-strong: rgba(201, 169, 110, 0.5);
 
   /* Radius */

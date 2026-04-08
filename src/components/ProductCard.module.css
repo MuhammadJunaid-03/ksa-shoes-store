@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Product Card — Dark Luxury with Hover Effects            */
+/*  Product Card — Dark Luxury with Inventory System          */
 /* ═══════════════════════════════════════════════════════════ */
 
 .card {
@@ -109,6 +109,37 @@
   font-weight: 400;
 }
 
+/* ─── Stock Warning Pill ─────────────────────────────────── */
+.stockWarning {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  padding: 0.3rem 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-full);
+  background: rgba(220, 80, 60, 0.15);
+  color: #f0a090;
+  border: 1px solid rgba(220, 80, 60, 0.25);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  animation: pulse-stock 2s ease-in-out infinite;
+}
+
+.stockWarning svg {
+  color: #e8715a;
+}
+
+@keyframes pulse-stock {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 /* ─── Quick Add ──────────────────────────────────────────── */
 .quickAdd {
   position: absolute;
@@ -143,6 +174,122 @@
 .quickAddBtn:hover {
   background-position: right center;
   box-shadow: var(--shadow-gold);
+}
+
+/* ─── Size Picker Overlay ────────────────────────────────── */
+.sizePicker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(18, 18, 22, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 1rem;
+  z-index: 5;
+  border-top: 1px solid var(--border);
+  animation: slideUpPicker 0.25s var(--ease-out);
+}
+
+@keyframes slideUpPicker {
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.sizePickerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+}
+
+.sizePickerClose {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  padding: 0.2rem;
+  transition: var(--transition-fast);
+}
+
+.sizePickerClose:hover {
+  color: var(--gold);
+}
+
+.sizeGrid {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.sizeOption {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.sizeOption:hover:not(:disabled) {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201, 169, 110, 0.08);
+}
+
+.sizeDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.sizeLow {
+  border-color: rgba(220, 120, 60, 0.4);
+}
+
+.sizeNum {
+  line-height: 1;
+}
+
+.sizeStockDot {
+  position: absolute;
+  bottom: 3px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #e88a5a;
+}
+
+.colorRow {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.colorOption {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  outline: 1px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.colorOption:hover, .colorActive {
+  outline-color: var(--gold);
+  transform: scale(1.15);
 }
 
 /* ─── Product Info ───────────────────────────────────────── */
@@ -190,11 +337,17 @@
   background-clip: text;
 }
 
-/* ─── Color Swatches ─────────────────────────────────────── */
+/* ─── Stock Row ──────────────────────────────────────────── */
+.stockRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.75rem;
+}
+
 .colors {
   display: flex;
   gap: 0.5rem;
-  margin-top: 0.75rem;
 }
 
 .colorSwatch {
@@ -210,4 +363,46 @@
 .colorSwatch:hover {
   outline-color: var(--gold);
   transform: scale(1.15);
+}
+
+.stockLabel {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.stockLabel::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.stockOk {
+  color: #6bc47f;
+}
+
+.stockOk::before {
+  background: #6bc47f;
+}
+
+.stockLow {
+  color: #e8925a;
+}
+
+.stockLow::before {
+  background: #e8925a;
+  animation: pulse-stock 2s ease-in-out infinite;
+}
+
+.stockNone {
+  color: var(--text-muted);
+}
+
+.stockNone::before {
+  background: var(--text-muted);
 }

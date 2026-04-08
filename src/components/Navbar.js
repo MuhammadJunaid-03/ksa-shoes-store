@@ -11,7 +11,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-  const { toggleCart, cartItems } = useCart();
+  const { toggleCart, cartCount } = useCart();
   const { t, toggleLang } = useLanguage();
   const { user, openLogin, logout } = useAuth();
 
@@ -130,8 +130,8 @@ export default function Navbar() {
                   <line x1="3" y1="6" x2="21" y2="6"></line>
                   <path d="M16 10a4 4 0 0 1-8 0"></path>
                 </svg>
-                {cartItems.length > 0 && (
-                  <span className={styles.cartBadge}>{cartItems.length}</span>
+                {cartCount > 0 && (
+                  <span className={styles.cartBadge}>{cartCount}</span>
                 )}
               </div>
             </button>

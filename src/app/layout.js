@@ -1,6 +1,7 @@
 import { Inter, Tajawal, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { InventoryProvider } from "@/context/InventoryContext";
 import { CartProvider } from "@/context/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { AuthProvider } from "@/context/AuthContext";
@@ -37,13 +38,15 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className={`${inter.variable} ${inter.className} ${tajawal.variable} ${playfair.variable}`}>
         <LanguageProvider>
           <AuthProvider>
-            <CartProvider>
-              <Navbar />
-              <CartDrawer />
-              <AuthModal />
-              <main>{children}</main>
-              <Footer />
-            </CartProvider>
+            <InventoryProvider>
+              <CartProvider>
+                <Navbar />
+                <CartDrawer />
+                <AuthModal />
+                <main>{children}</main>
+                <Footer />
+              </CartProvider>
+            </InventoryProvider>
           </AuthProvider>
         </LanguageProvider>
       </body>

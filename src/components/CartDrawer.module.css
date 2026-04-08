@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Cart Drawer — Dark Luxury Slide Panel                    */
+/*  Cart Drawer — Dark Luxury with Inventory Controls         */
 /* ═══════════════════════════════════════════════════════════ */
 
 .overlay {
@@ -81,24 +81,37 @@
   padding: 1.75rem;
 }
 
-.empty {
-  text-align: center;
+/* ─── Empty State ────────────────────────────────────────── */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 4rem;
   color: var(--text-muted);
-  margin-top: 3rem;
-  font-size: 0.95rem;
+  text-align: center;
 }
 
+.emptyState svg {
+  opacity: 0.3;
+}
+
+.emptyState p {
+  font-size: 0.9rem;
+}
+
+/* ─── Cart Items ─────────────────────────────────────────── */
 .itemList {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  gap: 1.5rem;
 }
 
 .cartItem {
   display: flex;
   gap: 1rem;
   position: relative;
-  padding-bottom: 1.75rem;
+  padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -113,60 +126,131 @@
   border-radius: var(--radius-sm);
   background-color: var(--primary-card);
   border: 1px solid var(--border);
+  flex-shrink: 0;
 }
 
 .itemDetails {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 0.3rem;
+  min-width: 0;
 }
 
-.itemDetails h4 {
-  font-size: 0.9rem;
+.itemName {
+  font-size: 0.85rem;
   font-weight: 500;
-  margin-bottom: 0.25rem;
   font-family: var(--font-display);
   color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .itemMeta {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
 }
 
-.itemPriceRow {
+/* ─── Quantity Controls ──────────────────────────────────── */
+.qtyPriceRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 0.5rem;
 }
 
-.itemQty {
-  font-size: 0.8rem;
+.qtyControls {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.qtyBtn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
   color: var(--text-secondary);
+  transition: var(--transition-fast);
+}
+
+.qtyBtn:hover:not(:disabled) {
+  color: var(--gold);
+  background: rgba(201, 169, 110, 0.08);
+}
+
+.qtyBtnDisabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.qtyValue {
+  width: 32px;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  height: 30px;
+  line-height: 30px;
 }
 
 .itemPrice {
   font-weight: 700;
   color: var(--gold);
+  font-size: 0.9rem;
+}
+
+/* ─── Stock Warnings ─────────────────────────────────────── */
+.cartStockWarn {
+  font-size: 0.65rem;
+  color: #e8925a;
+  margin-top: 0.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cartStockWarn::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e8925a;
+  animation: pulse-stock 2s ease-in-out infinite;
+}
+
+@keyframes pulse-stock {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.cartStockMax {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
 }
 
 .removeBtn {
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   color: var(--text-muted);
   transition: var(--transition-fast);
+  padding: 0.2rem;
 }
 
 .removeBtn:hover {
   color: #e74c3c;
 }
 
+/* ─── Footer ─────────────────────────────────────────────── */
 .footer {
   padding: 1.75rem;
   border-top: 1px solid var(--border);
@@ -176,10 +260,19 @@
 .subtotal {
   display: flex;
   justify-content: space-between;
-  font-size: 1.05rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color: var(--text-secondary);
+}
+
+.subtotalPrice {
+  font-size: 1.15rem;
+  font-weight: 700;
+  background: var(--gold-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .taxNote {
@@ -207,6 +300,7 @@
   box-shadow: var(--shadow-gold);
 }
 
+/* ─── Toast ──────────────────────────────────────────────── */
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -214,19 +308,32 @@
   transform: translateX(-50%) translateY(100px);
   background: var(--primary-card);
   color: var(--gold);
-  padding: 1rem 2rem;
+  padding: 0.85rem 1.5rem;
   border-radius: var(--radius-full);
   z-index: 2000;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 500;
   box-shadow: var(--shadow-gold);
   border: 1px solid var(--border-hover);
   opacity: 0;
   transition: all 0.4s var(--ease-out);
   backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
 }
 
 .toastVisible {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
+}
+
+.toastError {
+  border-color: rgba(220, 80, 60, 0.4);
+  color: #f0a090;
+}
+
+.toastError svg {
+  color: #e87060;
 }
