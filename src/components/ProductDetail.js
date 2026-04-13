@@ -6,20 +6,8 @@ import { useLanguage } from '@/context/LanguageContext';
 import { useCart } from '@/context/CartContext';
 import { useInventory } from '@/context/InventoryContext';
 import ProductCard from '@/components/ProductCard';
+import { getProductReviews, getAverageRating, getFitPercentage } from '@/data/reviews';
 import styles from './ProductDetail.module.css';
-
-// Try importing reviews data — fallback to empty if not yet created
-let getProductReviews, getAverageRating, getFitPercentage;
-try {
-  const reviewsModule = require('@/data/reviews');
-  getProductReviews = reviewsModule.getProductReviews;
-  getAverageRating = reviewsModule.getAverageRating;
-  getFitPercentage = reviewsModule.getFitPercentage;
-} catch {
-  getProductReviews = null;
-  getAverageRating = null;
-  getFitPercentage = null;
-}
 
 // ─── Hardcoded review data (fallback when reviews.js doesn't exist) ──
 const FALLBACK_REVIEWS = [
@@ -129,27 +117,23 @@ export default function ProductDetail({ productId }) {
 
   // Reviews
   const reviews = useMemo(() => {
-    if (getProductReviews && product) {
-      return getProductReviews(product.id);
-    }
-    return FALLBACK_REVIEWS;
+    if (!product) return FALLBACK_REVIEWS;
+    const productReviews = getProductReviews(product.id);
+    return productReviews.length > 0 ? productReviews : FALLBACK_REVIEWS;
   }, [product]);
 
   const avgRating = useMemo(() => {
-    if (getAverageRating && product) {
-      return getAverageRating(product.id);
-    }
-    return 4.8;
+    if (!product) return 4.8;
+    const result = getAverageRating(product.id);
+    return result.average || 4.8;
   }, [product]);
 
   const fitPct = useMemo(() => {
-    if (getFitPercentage && product) {
-      return getFitPercentage(product.id);
-    }
-    return 89;
+    if (!product) return 89;
+    return getFitPercentage(product.id) || 89;
   }, [product]);
 
-  const totalReviews = reviews?.length || 24;
+  const totalReviews = reviews.length;
   const breakdown = FALLBACK_BREAKDOWN;
   const breakdownTotal = Object.values(breakdown).reduce((a, b) => a + b, 0);
 

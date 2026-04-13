@@ -161,6 +161,52 @@
   transform: translateY(-2px);
 }
 
+/* ─── Hero Strip (Payment/Shipping) ─────────────────────── */
+.heroStrip {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+  padding: 1rem 1.5rem;
+  background: rgba(201, 169, 110, 0.06);
+  border: 1px solid rgba(201, 169, 110, 0.12);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(8px);
+}
+
+.heroStripItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.heroStripItem svg {
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.heroStripDot {
+  color: var(--gold);
+  opacity: 0.4;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .heroStrip {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 0.85rem 1.25rem;
+  }
+  .heroStripDot {
+    display: none;
+  }
+}
+
 /* ─── Scroll Indicator ───────────────────────────────────── */
 .scrollIndicator {
   position: absolute;
