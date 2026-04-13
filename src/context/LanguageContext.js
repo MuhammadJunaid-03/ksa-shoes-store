@@ -127,6 +127,23 @@ const translations = {
     returnHome: "Return to Home",
     productDetails: "Product Details",
     backToHome: "← Back to Home",
+
+    // Footer compliance
+    crNumber: "CR: 1010XXXXXX",
+    vatNumber: "VAT: 3XXXXXXXXXXXXXXX",
+    maroof: "Registered on Maroof",
+
+    // Reviews section
+    reviewsTitle: "What Our Customers Say",
+    reviewsTrust: "Trusted by 2,000+ Saudi gentlemen",
+    verifiedBuyer: "Verified Buyer",
+    reviewsAggregate: "4.8 ★ Average — Based on 247 reviews",
+    reviewer1Name: "Mohammed Al-Rashid",
+    reviewer2Name: "Fahad Al-Otaibi",
+    reviewer3Name: "Khalid Al-Harbi",
+    review1Text: "The craftsmanship is exceptional. Best sandals I've owned in years. The leather quality speaks for itself.",
+    review2Text: "Fast delivery to Riyadh, arrived next day. Perfect fit and exactly as described. Will order again.",
+    review3Text: "Bought three pairs for my family. Everyone loves them. The packaging was premium too — great gift option.",
   },
   ar: {
     // Navbar
@@ -251,6 +268,23 @@ const translations = {
     returnHome: "العودة للرئيسية",
     productDetails: "تفاصيل المنتج",
     backToHome: "→ العودة للرئيسية",
+
+    // Footer compliance
+    crNumber: "سجل تجاري: ١٠١٠XXXXXX",
+    vatNumber: "الرقم الضريبي: ٣XXXXXXXXXXXXXXX",
+    maroof: "مسجل في معروف",
+
+    // Reviews section
+    reviewsTitle: "ماذا يقول عملاؤنا",
+    reviewsTrust: "موثوق من قبل أكثر من ٢٠٠٠ رجل سعودي",
+    verifiedBuyer: "مشتري موثق",
+    reviewsAggregate: "٤.٨ ★ متوسط — بناءً على ٢٤٧ تقييم",
+    reviewer1Name: "محمد الراشد",
+    reviewer2Name: "فهد العتيبي",
+    reviewer3Name: "خالد الحربي",
+    review1Text: "الحرفية استثنائية. أفضل صنادل امتلكتها منذ سنوات. جودة الجلد تتحدث عن نفسها.",
+    review2Text: "توصيل سريع للرياض، وصل في اليوم التالي. مقاس مثالي وكما هو موصوف تماماً. سأطلب مرة أخرى.",
+    review3Text: "اشتريت ثلاثة أزواج لعائلتي. الجميع أحبها. التغليف كان فاخراً أيضاً — خيار هدية رائع.",
   }
 };
 

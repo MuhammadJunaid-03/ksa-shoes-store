@@ -4,11 +4,12 @@ import ProductGrid from "@/components/ProductGrid";
 import MarqueeBanner from "@/components/MarqueeBanner";
 import CategoryCards from "@/components/CategoryCards";
 import TrustBadges from "@/components/TrustBadges";
+import ReviewsSection from "@/components/ReviewsSection";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
   const { t } = useLanguage();
-  
+
   return (
     <>
       <Hero />
@@ -25,6 +26,7 @@ export default function Home() {
 
       <CategoryCards />
       <TrustBadges />
+      <ReviewsSection />
     </>
   );
 }

@@ -48,6 +48,30 @@
   max-width: 300px;
 }
 
+/* Social media icons row */
+.socialRow {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.socialIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+
+.socialIcon:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
 .linkTitle {
   font-size: 0.8rem;
   font-weight: 600;
@@ -149,6 +173,33 @@
   letter-spacing: 0.03em;
 }
 
+/* Payment methods row */
+.paymentRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.paymentBadge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+/* Compliance row */
+.complianceRow {
+  color: var(--text-muted);
+  font-size: 0.7rem;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
 @media (max-width: 1024px) {
   .footerGrid {
     grid-template-columns: 1fr 1fr;
@@ -163,5 +214,8 @@
   .footerGrid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+  }
+  .paymentRow {
+    gap: 0.5rem;
   }
 }
