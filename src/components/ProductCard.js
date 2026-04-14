@@ -33,11 +33,26 @@ export default function ProductCard({ product }) {
     : 0;
   const tamaraInstallment = Math.ceil(product.price / 3);
 
-  // Simulated rating based on product id (consistent per product)
+  // Simulated rating based on product id
   const ratings = [4.8, 4.6, 4.9, 4.7, 4.5, 4.8, 4.6, 4.9, 4.7, 4.5, 4.8, 4.6, 4.9, 4.7, 4.5, 4.8, 4.6, 4.9, 4.7, 4.5];
   const reviewCounts = [24, 18, 31, 12, 8, 22, 15, 27, 9, 14, 19, 11, 33, 7, 16, 20, 13, 25, 6, 10];
   const rating = ratings[(product.id - 1) % ratings.length];
   const reviewCount = reviewCounts[(product.id - 1) % reviewCounts.length];
+
+  // Unique visual treatment per product — subtle hue/brightness/gradient to differentiate
+  const cardStyles = [
+    { filter: 'none', glow: 'rgba(201, 169, 110, 0.05)' },
+    { filter: 'hue-rotate(8deg) saturate(1.1)', glow: 'rgba(180, 140, 90, 0.06)' },
+    { filter: 'brightness(1.05) contrast(1.03)', glow: 'rgba(220, 190, 130, 0.05)' },
+    { filter: 'hue-rotate(-5deg) brightness(0.97)', glow: 'rgba(160, 130, 80, 0.06)' },
+    { filter: 'sepia(0.08) brightness(1.03)', glow: 'rgba(200, 180, 120, 0.05)' },
+    { filter: 'hue-rotate(12deg) saturate(0.95)', glow: 'rgba(170, 150, 100, 0.06)' },
+    { filter: 'brightness(0.95) saturate(1.15)', glow: 'rgba(190, 160, 110, 0.05)' },
+    { filter: 'hue-rotate(-8deg) contrast(1.05)', glow: 'rgba(210, 170, 100, 0.06)' },
+    { filter: 'sepia(0.05) hue-rotate(5deg)', glow: 'rgba(195, 165, 105, 0.05)' },
+    { filter: 'brightness(1.02) hue-rotate(-3deg)', glow: 'rgba(185, 155, 95, 0.06)' },
+  ];
+  const visual = cardStyles[(product.id - 1) % cardStyles.length];
 
   const handleQuickAdd = (e) => {
     e.preventDefault();
@@ -69,9 +84,9 @@ export default function ProductCard({ product }) {
   };
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} style={{ '--card-glow': visual.glow, '--product-filter': visual.filter }}>
       <Link href={`/product/${product.id}`} className={styles.imageWrapper}>
-        <img src={product.image} alt={product.name} className={styles.image} />
+        <img src={product.image} alt={product.name} className={styles.image} style={{ filter: visual.filter }} />
 
         {badge && <div className={`${styles.badge} ${badge.className}`}>{badge.text}</div>}
 

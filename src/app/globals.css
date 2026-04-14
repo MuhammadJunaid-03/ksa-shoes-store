@@ -226,8 +226,34 @@ ul {
   100% { transform: translateX(-50%); }
 }
 
+/* ─── Focus ─────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
 /* ─── Selection ──────────────────────────────────────────── */
 ::selection {
   background-color: rgba(201, 169, 110, 0.3);
   color: var(--text-primary);
+}
+
+/* ─── Premium Page Transitions ──────────────────────────── */
+main {
+  animation: pageIn 0.4s var(--ease-out);
+}
+
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── Smooth scrollbar for product grids ────────────────── */
+.container {
+  scroll-behavior: smooth;
+}
+
+/* ─── Premium link underline effect ─────────────────────── */
+a:hover {
+  transition: color 0.2s var(--ease-out);
 }

@@ -1,25 +1,28 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Product Card — Dark Luxury with Inventory System          */
+/*  Product Card — Premium Dark Luxury v2                     */
 /* ═══════════════════════════════════════════════════════════ */
 
 .card {
   display: flex;
   flex-direction: column;
   animation: fadeInUp 0.6s var(--ease-out) both;
+  position: relative;
 }
 
-.card:nth-child(1) { animation-delay: 0.1s; }
-.card:nth-child(2) { animation-delay: 0.2s; }
-.card:nth-child(3) { animation-delay: 0.3s; }
-.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(1) { animation-delay: 0.05s; }
+.card:nth-child(2) { animation-delay: 0.1s; }
+.card:nth-child(3) { animation-delay: 0.15s; }
+.card:nth-child(4) { animation-delay: 0.2s; }
+.card:nth-child(5) { animation-delay: 0.25s; }
+.card:nth-child(6) { animation-delay: 0.3s; }
 
 /* ─── Image Container ────────────────────────────────────── */
 .imageWrapper {
   position: relative;
   background: var(--primary-card);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   overflow: hidden;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,6 +31,7 @@
   transition: var(--transition);
 }
 
+/* Ambient glow behind product */
 .imageWrapper::before {
   content: '';
   position: absolute;
@@ -35,32 +39,54 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 120%, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 80%, var(--card-glow, rgba(201, 169, 110, 0.04)) 0%, transparent 70%);
   opacity: 0;
-  transition: var(--transition);
+  transition: opacity 0.6s var(--ease-out);
   z-index: 1;
+  pointer-events: none;
+}
+
+/* Top-to-bottom gradient overlay */
+.imageWrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to top, rgba(18, 18, 24, 0.5) 0%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-out);
 }
 
 .imageWrapper:hover {
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 4px 20px rgba(201, 169, 110, 0.08);
+  transform: translateY(-4px);
 }
 
 .imageWrapper:hover::before {
   opacity: 1;
 }
 
+.imageWrapper:hover::after {
+  opacity: 1;
+}
+
 .image {
-  width: 85%;
-  height: 85%;
+  width: 80%;
+  height: 80%;
   object-fit: contain;
-  transition: transform 0.7s var(--ease-out);
+  transition: transform 0.8s var(--ease-out), filter 0.6s var(--ease-out);
   position: relative;
   z-index: 0;
+  filter: var(--product-filter, none);
 }
 
 .imageWrapper:hover .image {
-  transform: scale(1.05) translateY(-5px);
+  transform: scale(1.08) translateY(-8px);
 }
 
 /* ─── Badge ──────────────────────────────────────────────── */
@@ -68,45 +94,64 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
-  font-size: 0.65rem;
-  padding: 0.3rem 0.85rem;
-  font-weight: 600;
+  font-size: 0.6rem;
+  padding: 0.35rem 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   border-radius: var(--radius-full);
-  backdrop-filter: blur(10px);
-  z-index: 2;
-  border: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4;
+  border: 1px solid;
 }
 
 .badgeOut {
   background: rgba(100, 100, 100, 0.3);
   color: var(--text-secondary);
+  border-color: rgba(100, 100, 100, 0.2);
 }
 
 .badgeNew {
-  background: rgba(201, 169, 110, 0.15);
+  background: rgba(201, 169, 110, 0.12);
   color: var(--gold);
-  border-color: var(--border-hover);
+  border-color: rgba(201, 169, 110, 0.25);
 }
 
 .badgeBest {
-  background: rgba(201, 169, 110, 0.25);
+  background: rgba(201, 169, 110, 0.2);
   color: var(--gold-light);
-  border-color: var(--gold-dark);
+  border-color: rgba(201, 169, 110, 0.35);
 }
 
 .badgeLimited {
-  background: rgba(180, 50, 50, 0.2);
-  color: #e8a0a0;
-  border-color: rgba(180, 50, 50, 0.3);
+  background: rgba(180, 50, 50, 0.15);
+  color: #f0a0a0;
+  border-color: rgba(180, 50, 50, 0.25);
 }
 
 .originalPrice {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   text-decoration: line-through;
   font-weight: 400;
+}
+
+/* ─── Save % Badge ──────────────────────────────────────── */
+.saveBadge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.65rem;
+  padding: 0.3rem 0.6rem;
+  font-weight: 700;
+  border-radius: var(--radius-full);
+  background: rgba(180, 50, 50, 0.2);
+  color: #f0a0a0;
+  border: 1px solid rgba(180, 50, 50, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4;
 }
 
 /* ─── Stock Warning Pill ─────────────────────────────────── */
@@ -114,30 +159,31 @@
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   padding: 0.3rem 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: var(--radius-full);
-  background: rgba(220, 80, 60, 0.15);
+  background: rgba(220, 80, 60, 0.12);
   color: #f0a090;
-  border: 1px solid rgba(220, 80, 60, 0.25);
-  backdrop-filter: blur(10px);
-  z-index: 2;
+  border: 1px solid rgba(220, 80, 60, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 4;
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  animation: pulse-stock 2s ease-in-out infinite;
+  animation: pulseStock 2.5s ease-in-out infinite;
 }
 
 .stockWarning svg {
   color: #e8715a;
 }
 
-@keyframes pulse-stock {
+@keyframes pulseStock {
   0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
+  50% { opacity: 0.6; }
 }
 
 /* ─── Quick Add ──────────────────────────────────────────── */
@@ -147,9 +193,9 @@
   left: 0;
   width: 100%;
   padding: 1rem;
-  transition: var(--transition);
+  transition: all 0.4s var(--ease-out);
   opacity: 0;
-  z-index: 3;
+  z-index: 5;
 }
 
 .imageWrapper:hover .quickAdd {
@@ -165,15 +211,16 @@
   padding: 0.85rem;
   border-radius: var(--radius-sm);
   font-weight: 700;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   transition: var(--transition);
+  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.2);
 }
 
 .quickAddBtn:hover {
   background-position: right center;
-  box-shadow: var(--shadow-gold);
+  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.3);
 }
 
 /* ─── Size Picker Overlay ────────────────────────────────── */
@@ -183,11 +230,11 @@
   left: 0;
   width: 100%;
   background: rgba(18, 18, 22, 0.95);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   padding: 1rem;
-  z-index: 5;
-  border-top: 1px solid var(--border);
+  z-index: 6;
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
   animation: slideUpPicker 0.25s var(--ease-out);
 }
 
@@ -292,28 +339,12 @@
   transform: scale(1.15);
 }
 
-/* ─── Save Badge ────────────────────────────────────────── */
-.saveBadge {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 0.7rem;
-  padding: 0.3rem 0.65rem;
-  font-weight: 700;
-  border-radius: var(--radius-full);
-  background: rgba(180, 50, 50, 0.25);
-  color: #f0a0a0;
-  border: 1px solid rgba(180, 50, 50, 0.3);
-  backdrop-filter: blur(10px);
-  z-index: 2;
-}
-
 /* ─── Product Info ───────────────────────────────────────── */
 .info {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
-  padding: 0 0.25rem;
+  gap: 0.3rem;
+  padding: 0 0.35rem;
 }
 
 /* Rating row */
@@ -321,7 +352,7 @@
   display: flex;
   align-items: center;
   gap: 0.35rem;
-  margin-top: 0.15rem;
+  margin-top: 0.1rem;
 }
 
 .starsSmall {
@@ -343,9 +374,10 @@
 
 /* Tamara BNPL */
 .tamaraRow {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
-  margin-top: 0.1rem;
+  margin-top: 0.15rem;
+  line-height: 1.4;
 }
 
 .tamaraBrand {
@@ -354,18 +386,18 @@
 }
 
 .brand {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   text-transform: uppercase;
   color: var(--gold-dark);
-  letter-spacing: 0.1em;
-  font-weight: 500;
+  letter-spacing: 0.12em;
+  font-weight: 600;
 }
 
 .name {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.35;
   transition: var(--transition-fast);
   font-family: var(--font-display);
 }
@@ -375,14 +407,14 @@
 }
 
 .priceRow {
-  margin-top: 0.35rem;
+  margin-top: 0.25rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
 .price {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   background: var(--gold-text);
   -webkit-background-clip: text;
@@ -395,17 +427,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 0.75rem;
+  margin-top: 0.6rem;
 }
 
 .colors {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.4rem;
 }
 
 .colorSwatch {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 2px solid var(--primary-card);
   outline: 1px solid var(--border);
@@ -415,11 +447,11 @@
 
 .colorSwatch:hover {
   outline-color: var(--gold);
-  transform: scale(1.15);
+  transform: scale(1.2);
 }
 
 .stockLabel {
-  font-size: 0.65rem;
+  font-size: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
@@ -430,8 +462,8 @@
 
 .stockLabel::before {
   content: '';
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
 }
 
@@ -449,7 +481,7 @@
 
 .stockLow::before {
   background: #e8925a;
-  animation: pulse-stock 2s ease-in-out infinite;
+  animation: pulseStock 2s ease-in-out infinite;
 }
 
 .stockNone {
