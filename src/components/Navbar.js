@@ -46,7 +46,6 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
             <ul className={styles.navList}>
-              <li><Link href="/" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t('newArrivals')}</Link></li>
               <li><Link href="/sandals" className={styles.navLinkActive} onClick={() => setIsMenuOpen(false)}>{t('arabicSandals')}</Link></li>
               <li><Link href="/shoes" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t('formalShoes')}</Link></li>
               <li><Link href="/accessories" className={styles.navLink} onClick={() => setIsMenuOpen(false)}>{t('accessories')}</Link></li>

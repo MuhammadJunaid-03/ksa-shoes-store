@@ -390,6 +390,41 @@
   font-family: var(--font-display);
 }
 
+/* ─── Slide Navigation ─────────────────────────────────── */
+.slideNav {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.slideDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.4s var(--ease-out);
+  padding: 0;
+}
+
+.slideDot:hover {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.2);
+}
+
+.slideDotActive {
+  width: 28px;
+  border-radius: 10px;
+  background: var(--gold);
+  border-color: var(--gold);
+}
+
 /* ─── Bottom line ──────────────────────────────────────── */
 .heroDecor {
   position: absolute;

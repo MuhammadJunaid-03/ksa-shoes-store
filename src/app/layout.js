@@ -2,6 +2,8 @@ import { Inter, Tajawal, Playfair_Display } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import LiveChat from "@/components/LiveChat";
+import DevBadge from "@/components/DevBadge";
 import { InventoryProvider } from "@/context/InventoryContext";
 import { CartProvider } from "@/context/CartContext";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -47,6 +49,8 @@ export default function RootLayout({ children }) {
                 <main>{children}</main>
                 <Footer />
                 <WhatsAppButton />
+                <LiveChat />
+                <DevBadge />
               </CartProvider>
             </InventoryProvider>
           </AuthProvider>
