@@ -9,12 +9,12 @@
   --primary-card: #1e1e26;
   --primary-elevated: #282832;
 
-  /* Gold Accent Spectrum */
-  --gold: #c9a96e;
-  --gold-light: #e0c992;
-  --gold-dark: #a8893f;
-  --gold-shimmer: linear-gradient(135deg, #c9a96e 0%, #e0c992 50%, #c9a96e 100%);
-  --gold-text: linear-gradient(135deg, #c9a96e 0%, #f0dba8 40%, #c9a96e 80%, #e0c992 100%);
+  /* Gold Accent Spectrum — brightened for readability */
+  --gold: #e2c47e;
+  --gold-light: #f0dba8;
+  --gold-dark: #c9a44e;
+  --gold-shimmer: linear-gradient(135deg, #e2c47e 0%, #f0dba8 50%, #e2c47e 100%);
+  --gold-text: linear-gradient(135deg, #e2c47e 0%, #f5e6b8 40%, #e2c47e 80%, #f0dba8 100%);
 
   /* Text — warmer whites, brighter muted */
   --text-primary: #f5f1ea;
@@ -29,9 +29,9 @@
   --bg-glass: rgba(26, 26, 34, 0.8);
 
   /* Borders — slightly more visible */
-  --border: rgba(201, 169, 110, 0.14);
-  --border-hover: rgba(201, 169, 110, 0.32);
-  --border-strong: rgba(201, 169, 110, 0.5);
+  --border: rgba(226, 196, 126, 0.14);
+  --border-hover: rgba(226, 196, 126, 0.32);
+  --border-strong: rgba(226, 196, 126, 0.5);
 
   /* Radius */
   --radius-xs: 2px;
@@ -45,8 +45,8 @@
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 4px 20px rgba(201, 169, 110, 0.15);
-  --shadow-gold-lg: 0 8px 40px rgba(201, 169, 110, 0.2);
+  --shadow-gold: 0 4px 20px rgba(226, 196, 126, 0.15);
+  --shadow-gold-lg: 0 8px 40px rgba(226, 196, 126, 0.2);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -206,8 +206,8 @@ ul {
 }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0.3); }
-  50% { box-shadow: 0 0 0 12px rgba(201, 169, 110, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(226, 196, 126, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(226, 196, 126, 0); }
 }
 
 @keyframes slideInFromRight {
@@ -234,7 +234,7 @@ ul {
 
 /* ─── Selection ──────────────────────────────────────────── */
 ::selection {
-  background-color: rgba(201, 169, 110, 0.3);
+  background-color: rgba(226, 196, 126, 0.3);
   color: var(--text-primary);
 }
 
