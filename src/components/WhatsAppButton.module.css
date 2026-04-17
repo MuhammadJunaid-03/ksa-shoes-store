@@ -27,9 +27,9 @@
 
 @media (max-width: 768px) {
   .whatsappBtn {
-    bottom: 80px;
+    bottom: 70px;
     right: 16px;
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
   }
 }
