@@ -55,7 +55,7 @@ export default function CheckoutPage() {
   const inputStyle = {
     width: "100%",
     padding: "0.85rem 1rem",
-    background: "rgba(255, 255, 255, 0.03)",
+    background: "rgba(166, 124, 82, 0.04)",
     border: "1px solid var(--border)",
     borderRadius: "var(--radius-sm)",
     color: "var(--text-primary)",
@@ -168,7 +168,7 @@ export default function CheckoutPage() {
             {/* Express Checkout */}
             <div style={{ marginBottom: "2rem" }}>
               <div style={{ display: "flex", gap: "0.75rem", marginBottom: "1rem" }}>
-                <button type="button" style={{ flex: 1, padding: "0.85rem 1rem", background: "#000", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", color: "#fff", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", transition: "border-color 0.2s" }}>
+                <button type="button" style={{ flex: 1, padding: "0.85rem 1rem", background: "#2C1810", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", color: "#FAF6F1", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer", transition: "border-color 0.2s" }}>
                    Apple Pay
                 </button>
                 <button type="button" style={{ flex: 1, padding: "0.85rem 1rem", background: "var(--primary-card)", border: "1px solid var(--border)", borderRadius: "var(--radius-sm)", color: "var(--text-primary)", fontSize: "0.85rem", fontWeight: 600, cursor: "pointer" }}>
@@ -244,7 +244,7 @@ export default function CheckoutPage() {
               <label key={opt.id} style={{ ...radioRow, borderColor: form.shipping === opt.id ? "var(--gold)" : undefined }}>
                 <input type="radio" name="shipping" value={opt.id} checked={form.shipping === opt.id} onChange={() => update("shipping", opt.id)} style={{ accentColor: "var(--gold)" }} />
                 <span style={{ flex: 1, color: "var(--text-primary)", fontSize: "0.9rem" }}>{opt.label}</span>
-                <span style={{ color: opt.price === "FREE" ? "#4ade80" : "var(--text-secondary)", fontSize: "0.85rem", fontWeight: 600 }}>{opt.price}</span>
+                <span style={{ color: opt.price === "FREE" ? "#16a34a" : "var(--text-secondary)", fontSize: "0.85rem", fontWeight: 600 }}>{opt.price}</span>
               </label>
             ))}
 
@@ -310,7 +310,7 @@ export default function CheckoutPage() {
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "0.5rem" }}>
                 <span style={{ color: "var(--text-secondary)", fontSize: "0.85rem" }}>Shipping</span>
-                <span style={{ color: shippingCost === 0 ? "#4ade80" : "var(--text-primary)", fontSize: "0.85rem" }}>
+                <span style={{ color: shippingCost === 0 ? "#16a34a" : "var(--text-primary)", fontSize: "0.85rem" }}>
                   {shippingCost === 0 ? "FREE" : `SAR ${shippingCost}`}
                 </span>
               </div>

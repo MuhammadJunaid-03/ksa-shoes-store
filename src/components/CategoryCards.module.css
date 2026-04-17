@@ -61,7 +61,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 2rem;
-  background: radial-gradient(ellipse at center, rgba(10, 10, 10, 0.7) 0%, transparent 100%);
+  background: radial-gradient(ellipse at center, rgba(44, 24, 16, 0.08) 0%, transparent 100%);
 }
 
 .cardSubtitle {

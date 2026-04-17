@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Product Detail Page — Premium Dark Luxury PDP              */
+/*  Product Detail Page — Premium Camel Light PDP              */
 /* ═══════════════════════════════════════════════════════════ */
 
 /* ─── Container ─────────────────────────────────────────────── */
@@ -70,7 +70,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 50% 120%, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle at 50% 120%, rgba(166, 124, 82, 0.06) 0%, transparent 70%);
   opacity: 0;
   transition: var(--transition);
   z-index: 1;
@@ -151,25 +151,25 @@
 }
 
 .badgeNew {
-  background: rgba(201, 169, 110, 0.15);
+  background: rgba(166, 124, 82, 0.15);
   color: var(--gold);
   border-color: var(--border-hover);
 }
 
 .badgeBestseller {
-  background: rgba(201, 169, 110, 0.25);
+  background: rgba(166, 124, 82, 0.25);
   color: var(--gold-light);
   border-color: var(--gold-dark);
 }
 
 .badgeLimited {
-  background: rgba(180, 50, 50, 0.2);
-  color: #e8a0a0;
-  border-color: rgba(180, 50, 50, 0.3);
+  background: rgba(192, 69, 58, 0.1);
+  color: #c0453a;
+  border-color: rgba(192, 69, 58, 0.2);
 }
 
 .badgeSoldOut {
-  background: rgba(100, 100, 100, 0.3);
+  background: rgba(100, 100, 100, 0.12);
   color: var(--text-secondary);
 }
 
@@ -300,8 +300,8 @@
   font-weight: 700;
   padding: 0.2rem 0.6rem;
   border-radius: var(--radius-sm);
-  background: rgba(180, 50, 50, 0.2);
-  color: #e8a0a0;
+  background: rgba(192, 69, 58, 0.1);
+  color: #c0453a;
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -431,7 +431,7 @@
 .sizePill:hover:not(.sizeDisabled) {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.06);
+  background: rgba(166, 124, 82, 0.06);
 }
 
 .sizeActive {
@@ -493,7 +493,7 @@
 }
 
 .qtyBtn:hover {
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
   border-color: var(--border-hover);
   color: var(--gold);
 }
@@ -529,7 +529,7 @@
 }
 
 .stockNoteLow {
-  color: #e8925a;
+  color: #c8702e;
 }
 
 /* ─── Add to Bag ────────────────────────────────────────────── */
@@ -951,7 +951,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(18, 18, 24, 0.97);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid var(--border);
@@ -1051,7 +1051,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.9);
-  background: rgba(18, 18, 24, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border: 1px solid var(--gold);
   border-radius: var(--radius-lg);

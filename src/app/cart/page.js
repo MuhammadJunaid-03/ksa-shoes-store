@@ -386,7 +386,7 @@ export default function CartPage() {
               <span style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>Shipping</span>
               <span
                 style={{
-                  color: shippingCost === 0 ? "#4ade80" : "var(--text-primary)",
+                  color: shippingCost === 0 ? "#16a34a" : "var(--text-primary)",
                   fontSize: "0.9rem",
                   fontWeight: 500,
                 }}
@@ -451,7 +451,7 @@ export default function CartPage() {
                 style={{
                   flex: 1,
                   padding: "0.75rem 1rem",
-                  background: "rgba(255, 255, 255, 0.03)",
+                  background: "rgba(166, 124, 82, 0.04)",
                   border: "1px solid var(--border)",
                   borderRadius: "var(--radius-sm)",
                   color: "var(--text-primary)",

@@ -19,7 +19,7 @@
 }
 
 .badge:hover {
-  background: rgba(201, 169, 110, 0.03);
+  background: rgba(166, 124, 82, 0.03);
 }
 
 .icon {
@@ -38,7 +38,7 @@
 .badge:hover .icon {
   border-color: var(--border-hover);
   box-shadow: var(--shadow-gold);
-  background: rgba(201, 169, 110, 0.05);
+  background: rgba(166, 124, 82, 0.05);
 }
 
 .title {

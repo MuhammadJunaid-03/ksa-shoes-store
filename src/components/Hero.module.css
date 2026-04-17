@@ -17,11 +17,11 @@
   inset: 0;
   background: linear-gradient(
     135deg,
-    #0a0a0f 0%,
-    #0f0f18 25%,
-    #12121e 50%,
-    #0e0e16 75%,
-    #0a0a0f 100%
+    #F5EDE4 0%,
+    #FBF8F3 25%,
+    #F0E8DD 50%,
+    #F5EDE4 75%,
+    #FBF8F3 100%
   );
   z-index: 0;
 }
@@ -33,7 +33,7 @@
   right: 20%;
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(166, 124, 82, 0.06) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   animation: orbFloat 12s ease-in-out infinite alternate;
@@ -46,7 +46,7 @@
   left: 5%;
   width: 400px;
   height: 400px;
-  background: radial-gradient(circle, rgba(201, 169, 110, 0.04) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(166, 124, 82, 0.04) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
   animation: orbFloat 15s ease-in-out 3s infinite alternate-reverse;
@@ -63,8 +63,8 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(201, 169, 110, 0.02) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(201, 169, 110, 0.02) 1px, transparent 1px);
+    linear-gradient(rgba(166, 124, 82, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(166, 124, 82, 0.02) 1px, transparent 1px);
   background-size: 80px 80px;
   z-index: 0;
   mask-image: radial-gradient(ellipse at 60% 50%, black 30%, transparent 70%);
@@ -235,7 +235,7 @@
 .ctaPrimary:hover {
   background-position: right center;
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.25);
+  box-shadow: 0 8px 32px rgba(166, 124, 82, 0.25);
 }
 
 .ctaPrimary:hover::before {
@@ -308,8 +308,8 @@
   height: 80%;
   background: radial-gradient(
     ellipse at center,
-    rgba(201, 169, 110, 0.08) 0%,
-    rgba(201, 169, 110, 0.03) 40%,
+    rgba(166, 124, 82, 0.08) 0%,
+    rgba(166, 124, 82, 0.03) 40%,
     transparent 70%
   );
   border-radius: 50%;
@@ -338,8 +338,8 @@
 .productImage {
   width: 100%;
   height: auto;
-  filter: drop-shadow(0 30px 60px rgba(0, 0, 0, 0.5))
-          drop-shadow(0 10px 20px rgba(201, 169, 110, 0.1));
+  filter: drop-shadow(0 30px 60px rgba(44, 24, 16, 0.1))
+          drop-shadow(0 10px 20px rgba(166, 124, 82, 0.1));
   transition: transform 0.8s var(--ease-out);
 }
 
@@ -352,10 +352,10 @@
   position: absolute;
   bottom: 15%;
   right: 5%;
-  background: rgba(18, 18, 24, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(201, 169, 110, 0.2);
+  border: 1px solid rgba(166, 124, 82, 0.2);
   border-radius: var(--radius-md);
   padding: 0.75rem 1.25rem;
   display: flex;
@@ -406,7 +406,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  border: 1px solid rgba(201, 169, 110, 0.4);
+  border: 1px solid rgba(166, 124, 82, 0.4);
   background: transparent;
   cursor: pointer;
   transition: all 0.4s var(--ease-out);
@@ -415,7 +415,7 @@
 
 .slideDot:hover {
   border-color: var(--gold);
-  background: rgba(201, 169, 110, 0.2);
+  background: rgba(166, 124, 82, 0.2);
 }
 
 .slideDotActive {

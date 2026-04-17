@@ -71,7 +71,7 @@ export default function Shipping() {
                     textTransform: "uppercase",
                     letterSpacing: "0.06em",
                     borderBottom: "1px solid var(--border)",
-                    background: "rgba(201, 169, 110, 0.08)",
+                    background: "rgba(166, 124, 82, 0.08)",
                   }}
                 >
                   {h}
@@ -131,7 +131,7 @@ export default function Shipping() {
                   width: "48px",
                   height: "48px",
                   borderRadius: "50%",
-                  background: "rgba(201, 169, 110, 0.12)",
+                  background: "rgba(166, 124, 82, 0.12)",
                   color: "var(--gold)",
                   fontFamily: "var(--font-display)",
                   fontSize: "1.25rem",
@@ -193,7 +193,7 @@ export default function Shipping() {
           margin: "0 auto",
           textAlign: "center",
           background: "var(--primary-soft)",
-          borderColor: "rgba(201, 169, 110, 0.25)",
+          borderColor: "rgba(166, 124, 82, 0.25)",
         }}
       >
         <h3 style={{ color: "var(--gold)", fontFamily: "var(--font-display)", fontSize: "1.15rem", marginBottom: "0.5rem" }}>

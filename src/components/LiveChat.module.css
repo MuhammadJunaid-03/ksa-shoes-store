@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Live Chat — Premium Dark Luxury                          */
+/*  Live Chat — Premium Camel Light                          */
 /* ═══════════════════════════════════════════════════════════ */
 
 /* ─── Chat Button ──────────────────────────────────────── */
@@ -18,14 +18,14 @@
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 999;
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 4px 20px rgba(166, 124, 82, 0.3);
   transition: all 0.3s ease;
   border: none;
 }
 
 .chatBtn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.4);
+  box-shadow: 0 8px 32px rgba(166, 124, 82, 0.4);
 }
 
 .chatBtnHidden {
@@ -53,7 +53,7 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(201, 169, 110, 0.1);
+  box-shadow: 0 20px 60px rgba(44, 24, 16, 0.1), 0 0 0 1px rgba(166, 124, 82, 0.1);
   animation: chatSlideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -102,14 +102,14 @@
   align-items: center;
   gap: 0.35rem;
   font-size: 0.72rem;
-  color: #6bc47f;
+  color: #2e8b4a;
 }
 
 .onlineDot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: #6bc47f;
+  background: #2e8b4a;
   animation: dotPulse 2s ease-in-out infinite;
 }
 
@@ -167,8 +167,8 @@
 
 .msgUser {
   align-self: flex-end;
-  background: rgba(201, 169, 110, 0.12);
-  border: 1px solid rgba(201, 169, 110, 0.2);
+  background: rgba(166, 124, 82, 0.12);
+  border: 1px solid rgba(166, 124, 82, 0.2);
   color: var(--text-primary);
   border-bottom-right-radius: var(--radius-xs);
 }
@@ -192,7 +192,7 @@
   font-size: 0.72rem;
   color: var(--gold);
   background: transparent;
-  border: 1px solid rgba(201, 169, 110, 0.25);
+  border: 1px solid rgba(166, 124, 82, 0.25);
   border-radius: var(--radius-full);
   cursor: pointer;
   white-space: nowrap;
@@ -200,7 +200,7 @@
 }
 
 .quickBtn:hover {
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
   border-color: var(--gold);
 }
 
@@ -216,7 +216,7 @@
 .chatInputField {
   flex: 1;
   padding: 0.7rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(166, 124, 82, 0.04);
   border: 1px solid var(--border);
   border-right: none;
   border-radius: var(--radius-sm) 0 0 var(--radius-sm);

@@ -88,7 +88,7 @@ export default function SizeGuide() {
                   width: "48px",
                   height: "48px",
                   borderRadius: "50%",
-                  background: "rgba(201, 169, 110, 0.12)",
+                  background: "rgba(166, 124, 82, 0.12)",
                   color: "var(--gold)",
                   fontFamily: "var(--font-display)",
                   fontSize: "1.25rem",
@@ -138,7 +138,7 @@ export default function SizeGuide() {
                     textTransform: "uppercase",
                     letterSpacing: "0.08em",
                     borderBottom: "1px solid var(--border)",
-                    background: "rgba(201, 169, 110, 0.08)",
+                    background: "rgba(166, 124, 82, 0.08)",
                   }}
                 >
                   {h}
@@ -184,7 +184,7 @@ export default function SizeGuide() {
           margin: "0 auto",
           textAlign: "center",
           background: "var(--primary-soft)",
-          border: "1px solid rgba(201, 169, 110, 0.25)",
+          border: "1px solid rgba(166, 124, 82, 0.25)",
           borderRadius: "var(--radius-md)",
           padding: "2.5rem 2rem",
         }}

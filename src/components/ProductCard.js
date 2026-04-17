@@ -41,7 +41,7 @@ export default function ProductCard({ product }) {
 
   // Unique visual treatment per product — subtle hue/brightness/gradient to differentiate
   const cardStyles = [
-    { filter: 'none', glow: 'rgba(201, 169, 110, 0.05)' },
+    { filter: 'none', glow: 'rgba(166, 124, 82, 0.05)' },
     { filter: 'hue-rotate(8deg) saturate(1.1)', glow: 'rgba(180, 140, 90, 0.06)' },
     { filter: 'brightness(1.05) contrast(1.03)', glow: 'rgba(220, 190, 130, 0.05)' },
     { filter: 'hue-rotate(-5deg) brightness(0.97)', glow: 'rgba(160, 130, 80, 0.06)' },

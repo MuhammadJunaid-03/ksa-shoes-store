@@ -1,37 +1,37 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  AL-ZAYTOUN — Premium Dark Luxury Design System           */
+/*  AL-ZAYTOUN — Premium Camel Light Design System           */
 /* ═══════════════════════════════════════════════════════════ */
 
 :root {
-  /* Core Palette — Refined Dark Luxury (brightened) */
-  --primary: #121218;
-  --primary-soft: #1a1a22;
-  --primary-card: #1e1e26;
-  --primary-elevated: #282832;
+  /* Core Palette — Warm Camel Light */
+  --primary: #2C1810;
+  --primary-soft: #F5EDE4;
+  --primary-card: #FAF6F1;
+  --primary-elevated: #EDE5DA;
 
-  /* Gold Accent Spectrum — brightened for readability */
-  --gold: #e2c47e;
-  --gold-light: #f0dba8;
-  --gold-dark: #c9a44e;
-  --gold-shimmer: linear-gradient(135deg, #e2c47e 0%, #f0dba8 50%, #e2c47e 100%);
-  --gold-text: linear-gradient(135deg, #e2c47e 0%, #f5e6b8 40%, #e2c47e 80%, #f0dba8 100%);
+  /* Camel Accent Spectrum */
+  --gold: #A67C52;
+  --gold-light: #C4956A;
+  --gold-dark: #8B6538;
+  --gold-shimmer: linear-gradient(135deg, #A67C52 0%, #C4956A 50%, #A67C52 100%);
+  --gold-text: linear-gradient(135deg, #8B6538 0%, #A67C52 40%, #8B6538 80%, #7A5630 100%);
 
-  /* Text — warmer whites, brighter muted */
-  --text-primary: #f5f1ea;
-  --text-secondary: #b0aaa2;
-  --text-muted: #7a756e;
+  /* Text — dark browns for readability on light bg */
+  --text-primary: #2C1810;
+  --text-secondary: #6B5744;
+  --text-muted: #9A8B7A;
   --text-accent: var(--gold);
 
-  /* Surfaces — lifted with subtle blue undertone */
-  --bg-page: #121218;
-  --bg-card: #1a1a22;
-  --bg-card-hover: #24242e;
-  --bg-glass: rgba(26, 26, 34, 0.8);
+  /* Surfaces — warm cream tones */
+  --bg-page: #FBF8F3;
+  --bg-card: #F5EDE4;
+  --bg-card-hover: #EDE5DA;
+  --bg-glass: rgba(251, 248, 243, 0.85);
 
-  /* Borders — slightly more visible */
-  --border: rgba(226, 196, 126, 0.14);
-  --border-hover: rgba(226, 196, 126, 0.32);
-  --border-strong: rgba(226, 196, 126, 0.5);
+  /* Borders — subtle camel tones */
+  --border: rgba(166, 124, 82, 0.18);
+  --border-hover: rgba(166, 124, 82, 0.35);
+  --border-strong: rgba(166, 124, 82, 0.55);
 
   /* Radius */
   --radius-xs: 2px;
@@ -41,12 +41,12 @@
   --radius-xl: 24px;
   --radius-full: 9999px;
 
-  /* Shadows */
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
-  --shadow-gold: 0 4px 20px rgba(226, 196, 126, 0.15);
-  --shadow-gold-lg: 0 8px 40px rgba(226, 196, 126, 0.2);
+  /* Shadows — softer for light theme */
+  --shadow-sm: 0 2px 8px rgba(44, 24, 16, 0.06);
+  --shadow-md: 0 8px 24px rgba(44, 24, 16, 0.08);
+  --shadow-lg: 0 16px 48px rgba(44, 24, 16, 0.1);
+  --shadow-gold: 0 4px 20px rgba(166, 124, 82, 0.15);
+  --shadow-gold-lg: 0 8px 40px rgba(166, 124, 82, 0.2);
 
   /* Transitions */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -87,7 +87,7 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--primary);
+  background: var(--primary-elevated);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--gold-dark);
@@ -206,8 +206,8 @@ ul {
 }
 
 @keyframes pulse-gold {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(226, 196, 126, 0.3); }
-  50% { box-shadow: 0 0 0 12px rgba(226, 196, 126, 0); }
+  0%, 100% { box-shadow: 0 0 0 0 rgba(166, 124, 82, 0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(166, 124, 82, 0); }
 }
 
 @keyframes slideInFromRight {
@@ -234,7 +234,7 @@ ul {
 
 /* ─── Selection ──────────────────────────────────────────── */
 ::selection {
-  background-color: rgba(226, 196, 126, 0.3);
+  background-color: rgba(166, 124, 82, 0.2);
   color: var(--text-primary);
 }
 

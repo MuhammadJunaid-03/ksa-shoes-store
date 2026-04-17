@@ -25,7 +25,7 @@ export default function Home() {
       {/* ── Stats Banner ── */}
       <section style={{
         padding: "4rem 0",
-        background: "linear-gradient(180deg, var(--primary-soft) 0%, var(--primary) 100%)",
+        background: "linear-gradient(180deg, var(--primary-soft) 0%, var(--primary-elevated) 100%)",
         borderTop: "1px solid var(--border)",
         position: "relative",
         overflow: "hidden",
@@ -33,7 +33,7 @@ export default function Home() {
         {/* Decorative background pattern */}
         <div style={{
           position: "absolute", top: 0, left: 0, right: 0, bottom: 0,
-          background: "radial-gradient(ellipse at 30% 50%, rgba(201,169,110,0.03) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(201,169,110,0.03) 0%, transparent 50%)",
+          background: "radial-gradient(ellipse at 30% 50%, rgba(166,124,82,0.03) 0%, transparent 50%), radial-gradient(ellipse at 70% 50%, rgba(166,124,82,0.03) 0%, transparent 50%)",
           pointerEvents: "none",
         }} />
 
@@ -56,7 +56,7 @@ export default function Home() {
                 padding: "1.5rem 1rem",
                 borderRadius: "var(--radius-md)",
                 border: "1px solid var(--border)",
-                background: "rgba(26, 26, 34, 0.5)",
+                background: "rgba(245, 237, 228, 0.6)",
                 backdropFilter: "blur(8px)",
                 transition: "all 0.3s ease",
               }}>

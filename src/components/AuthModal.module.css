@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Auth Modal — Dark Luxury Login/Signup                    */
+/*  Auth Modal — Camel Light Login/Signup                    */
 /* ═══════════════════════════════════════════════════════════ */
 
 .overlay {
@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(44, 24, 16, 0.15);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 600;
@@ -34,7 +34,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6), 0 0 60px rgba(201, 169, 110, 0.05);
+  box-shadow: 0 32px 80px rgba(44, 24, 16, 0.12), 0 0 60px rgba(166, 124, 82, 0.05);
   animation: modalIn 0.35s var(--ease-out);
 }
 
@@ -60,7 +60,7 @@
 
 .closeBtn:hover {
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
 }
 
 /* ─── Header ─────────────────────────────────────────────── */
@@ -78,7 +78,7 @@
   justify-content: center;
   border-radius: var(--radius-full);
   border: 1px solid var(--border-hover);
-  background: rgba(201, 169, 110, 0.05);
+  background: rgba(166, 124, 82, 0.05);
   font-family: var(--font-tajawal);
   font-size: 1.2rem;
   font-weight: 700;
@@ -159,16 +159,16 @@
 
 .input:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.08);
+  box-shadow: 0 0 0 3px rgba(166, 124, 82, 0.08);
 }
 
 .inputError {
-  border-color: #e74c3c;
+  border-color: #d4453a;
 }
 
 .error {
   font-size: 0.7rem;
-  color: #e74c3c;
+  color: #d4453a;
   margin-top: 0.1rem;
 }
 
@@ -262,7 +262,7 @@
 .socialBtn:hover {
   border-color: var(--border-hover);
   color: var(--text-primary);
-  background: rgba(201, 169, 110, 0.03);
+  background: rgba(166, 124, 82, 0.03);
 }
 
 /* ─── Switch Mode ────────────────────────────────────────── */

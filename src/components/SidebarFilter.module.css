@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Sidebar Filter — Dark Luxury                             */
+/*  Sidebar Filter — Camel Light                             */
 /* ═══════════════════════════════════════════════════════════ */
 
 .container {
@@ -79,7 +79,7 @@
 .sizeBtn:hover {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.05);
+  background: rgba(166, 124, 82, 0.05);
 }
 
 .range {

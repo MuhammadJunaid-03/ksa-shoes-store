@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Cart Drawer — Dark Luxury with Inventory Controls         */
+/*  Cart Drawer — Camel Light with Inventory Controls         */
 /* ═══════════════════════════════════════════════════════════ */
 
 .overlay {
@@ -8,7 +8,7 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(44, 24, 16, 0.12);
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -31,7 +31,7 @@
   height: 100vh;
   background-color: var(--primary-soft);
   z-index: 1001;
-  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.5);
+  box-shadow: -16px 0 48px rgba(44, 24, 16, 0.1);
   transition: right 0.5s var(--ease-out);
   display: flex;
   flex-direction: column;
@@ -72,7 +72,7 @@
 
 .closeBtn:hover {
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
 }
 
 .body {
@@ -181,7 +181,7 @@
 
 .qtyBtn:hover:not(:disabled) {
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
 }
 
 .qtyBtnDisabled {
@@ -210,7 +210,7 @@
 /* ─── Stock Warnings ─────────────────────────────────────── */
 .cartStockWarn {
   font-size: 0.65rem;
-  color: #e8925a;
+  color: #c8702e;
   margin-top: 0.25rem;
   display: flex;
   align-items: center;
@@ -222,7 +222,7 @@
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #e8925a;
+  background: #c8702e;
   animation: pulse-stock 2s ease-in-out infinite;
 }
 
@@ -247,7 +247,7 @@
 }
 
 .removeBtn:hover {
-  color: #e74c3c;
+  color: #d4453a;
 }
 
 /* ─── Footer ─────────────────────────────────────────────── */
@@ -330,10 +330,10 @@
 }
 
 .toastError {
-  border-color: rgba(220, 80, 60, 0.4);
-  color: #f0a090;
+  border-color: rgba(196, 77, 46, 0.25);
+  color: #c04535;
 }
 
 .toastError svg {
-  color: #e87060;
+  color: #c0453a;
 }

@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Footer — Dark Luxury with Gold Accents                   */
+/*  Footer — Camel Light with Gold Accents                   */
 /* ═══════════════════════════════════════════════════════════ */
 
 .footer {
@@ -132,7 +132,7 @@
 .input {
   flex: 1;
   padding: 0.85rem 1rem;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: rgba(166, 124, 82, 0.04);
   border: none;
   color: var(--text-primary);
   outline: none;
@@ -144,7 +144,7 @@
 }
 
 .input:focus {
-  background-color: rgba(201, 169, 110, 0.03);
+  background-color: rgba(166, 124, 82, 0.03);
 }
 
 .submitBtn {

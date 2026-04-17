@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Product Card — Premium Dark Luxury v2                     */
+/*  Product Card — Premium Camel Light v2                     */
 /* ═══════════════════════════════════════════════════════════ */
 
 .card {
@@ -39,7 +39,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(ellipse at 50% 80%, var(--card-glow, rgba(201, 169, 110, 0.04)) 0%, transparent 70%);
+  background: radial-gradient(ellipse at 50% 80%, var(--card-glow, rgba(166, 124, 82, 0.04)) 0%, transparent 70%);
   opacity: 0;
   transition: opacity 0.6s var(--ease-out);
   z-index: 1;
@@ -54,7 +54,7 @@
   left: 0;
   right: 0;
   height: 40%;
-  background: linear-gradient(to top, rgba(18, 18, 24, 0.5) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(245, 237, 228, 0.5) 0%, transparent 100%);
   z-index: 1;
   pointer-events: none;
   opacity: 0;
@@ -63,7 +63,7 @@
 
 .imageWrapper:hover {
   border-color: var(--border-hover);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 4px 20px rgba(201, 169, 110, 0.08);
+  box-shadow: 0 12px 40px rgba(44, 24, 16, 0.08), 0 4px 20px rgba(166, 124, 82, 0.08);
   transform: translateY(-4px);
 }
 
@@ -107,27 +107,27 @@
 }
 
 .badgeOut {
-  background: rgba(100, 100, 100, 0.3);
+  background: rgba(100, 100, 100, 0.12);
   color: var(--text-secondary);
-  border-color: rgba(100, 100, 100, 0.2);
+  border-color: rgba(100, 100, 100, 0.1);
 }
 
 .badgeNew {
-  background: rgba(201, 169, 110, 0.12);
+  background: rgba(166, 124, 82, 0.12);
   color: var(--gold);
-  border-color: rgba(201, 169, 110, 0.25);
+  border-color: rgba(166, 124, 82, 0.25);
 }
 
 .badgeBest {
-  background: rgba(201, 169, 110, 0.2);
+  background: rgba(166, 124, 82, 0.2);
   color: var(--gold-light);
-  border-color: rgba(201, 169, 110, 0.35);
+  border-color: rgba(166, 124, 82, 0.35);
 }
 
 .badgeLimited {
-  background: rgba(180, 50, 50, 0.15);
-  color: #f0a0a0;
-  border-color: rgba(180, 50, 50, 0.25);
+  background: rgba(192, 69, 58, 0.1);
+  color: #c0453a;
+  border-color: rgba(192, 69, 58, 0.2);
 }
 
 .originalPrice {
@@ -146,9 +146,9 @@
   padding: 0.3rem 0.6rem;
   font-weight: 700;
   border-radius: var(--radius-full);
-  background: rgba(180, 50, 50, 0.2);
-  color: #f0a0a0;
-  border: 1px solid rgba(180, 50, 50, 0.25);
+  background: rgba(192, 69, 58, 0.1);
+  color: #c0453a;
+  border: 1px solid rgba(192, 69, 58, 0.2);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 4;
@@ -157,17 +157,17 @@
 /* ─── Stock Warning Pill ─────────────────────────────────── */
 .stockWarning {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: 3.2rem;
+  left: 1rem;
   font-size: 0.6rem;
   padding: 0.3rem 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   border-radius: var(--radius-full);
-  background: rgba(220, 80, 60, 0.12);
-  color: #f0a090;
-  border: 1px solid rgba(220, 80, 60, 0.2);
+  background: rgba(196, 77, 46, 0.1);
+  color: #c04535;
+  border: 1px solid rgba(196, 77, 46, 0.15);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   z-index: 4;
@@ -178,7 +178,7 @@
 }
 
 .stockWarning svg {
-  color: #e8715a;
+  color: #c44d2e;
 }
 
 @keyframes pulseStock {
@@ -215,12 +215,12 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   transition: var(--transition);
-  box-shadow: 0 4px 20px rgba(201, 169, 110, 0.2);
+  box-shadow: 0 4px 20px rgba(166, 124, 82, 0.2);
 }
 
 .quickAddBtn:hover {
   background-position: right center;
-  box-shadow: 0 8px 32px rgba(201, 169, 110, 0.3);
+  box-shadow: 0 8px 32px rgba(166, 124, 82, 0.3);
 }
 
 /* ─── Size Picker Overlay ────────────────────────────────── */
@@ -229,12 +229,12 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(18, 18, 22, 0.95);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 1rem;
   z-index: 6;
-  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  border-top: 1px solid rgba(166, 124, 82, 0.15);
   animation: slideUpPicker 0.25s var(--ease-out);
 }
 
@@ -291,7 +291,7 @@
 .sizeOption:hover:not(:disabled) {
   border-color: var(--gold);
   color: var(--gold);
-  background: rgba(201, 169, 110, 0.08);
+  background: rgba(166, 124, 82, 0.08);
 }
 
 .sizeDisabled {
@@ -301,7 +301,7 @@
 }
 
 .sizeLow {
-  border-color: rgba(220, 120, 60, 0.4);
+  border-color: rgba(200, 101, 46, 0.3);
 }
 
 .sizeNum {
@@ -314,7 +314,7 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e88a5a;
+  background: #c8652e;
 }
 
 .colorRow {
@@ -468,19 +468,19 @@
 }
 
 .stockOk {
-  color: #6bc47f;
+  color: #2e8b4a;
 }
 
 .stockOk::before {
-  background: #6bc47f;
+  background: #2e8b4a;
 }
 
 .stockLow {
-  color: #e8925a;
+  color: #c8702e;
 }
 
 .stockLow::before {
-  background: #e8925a;
+  background: #c8702e;
   animation: pulseStock 2s ease-in-out infinite;
 }
 

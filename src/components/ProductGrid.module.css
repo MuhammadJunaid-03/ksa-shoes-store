@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════ */
-/*  Product Grid — Dark Layout                               */
+/*  Product Grid — Camel Light Layout                               */
 /* ═══════════════════════════════════════════════════════════ */
 
 .layout {
@@ -38,7 +38,7 @@
 
 .sortSelect:focus {
   border-color: var(--gold);
-  box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.1);
+  box-shadow: 0 0 0 2px rgba(166, 124, 82, 0.1);
 }
 
 .grid {

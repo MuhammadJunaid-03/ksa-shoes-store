@@ -210,7 +210,7 @@ export default function FAQ() {
           margin: "0 auto",
           textAlign: "center",
           background: "var(--primary-soft)",
-          border: "1px solid rgba(201, 169, 110, 0.25)",
+          border: "1px solid rgba(166, 124, 82, 0.25)",
           borderRadius: "var(--radius-md)",
           padding: "2.5rem 2rem",
         }}
